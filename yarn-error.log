@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Camille\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\Camille\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Camille\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\WIDCOMM\Bluetooth Software;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\QuickTime\QTSystem;C:\Users\Camille\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files (x86)\Skype\Phone;C:\Program Files\nodejs;C:\Ruby24-x64-2\bin;C:\Users\Camille\AppData\Local\Microsoft\WindowsApps;C:\Users\Camille\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  6.11.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: write EPIPE
+      at exports._errnoException (util.js:1020:11)
+      at Socket._writeGeneric (net.js:711:26)
+      at Socket._write (net.js:730:8)
+      at doWrite (_stream_writable.js:333:12)
+      at writeOrBuffer (_stream_writable.js:319:5)
+      at Socket.Writable.write (_stream_writable.js:245:11)
+      at Socket.write (net.js:657:40)
+      at ConsoleReporter._log (C:\Users\Camille\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:87213:17)
+      at ConsoleReporter.log (C:\Users\Camille\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:87200:10)
+      at ConsoleReporter.step (C:\Users\Camille\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:87146:10)
