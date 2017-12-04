@@ -23,15 +23,110 @@
     <!-- endbuild -->
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" width="110px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#characters">All the characters</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- Slider -->
+      <div id="slider-home" class="row">
+        <div class="col-12">
+          <!-- Swiper - Addtional Librairy -->
+          <div class="swiper-container swiper-home">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="img-fluid" src="./images/sw1.jpg" alt="image1"></div>
+              <div class="swiper-slide"><img class="img-fluid" src="./images/sw2.jpg" alt="image2"></div>
+              <div class="swiper-slide"><img class="img-fluid" src="./images/sw3.jpg" alt="image3"></div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-bullets "></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Liste des personnages -->
+      <div id="characters" class="row">
+        <div class="col-12">  
+          <h1 class="text-center">The Star Wars characters</h1>
+          <p class="text-center"><i>(Click on the names to see the characters details)</i></p>
+          <ol class="row" id="list-characters">
+
+          </ol>
+
+          <div class="text-center">
+            <button id="plusbutton" class="btn btn-info">See more</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modales -->
+      <div id="details-characters">
+
+      </div>
+
+      <!-- Personnages favoris -->
+      <div id="cards" class="row text-center">
+        <div class="col-12">
+          <h1 class="text-center">My favorite characters</h1>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img class="card-img-top img-survol" src="images/bb8.jpg" alt="bb8">
+            <div class="card-block">
+              <h2 class="card-text">BB8</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img id="img_hover" class="card-img-top" src="images/luke.jpg" alt="luke-skywalker">
+            <div class="card-block">
+              <!-- First request -->
+              <h2 id="name" class="card-text"></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="images/R2d2.jpg" alt="r2d2">
+            <div class="card-block">
+              <h2 class="card-text">R2D2</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="container">
+    <!-- <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active">
-            <a href="#">Home</a>
+            <a href="#">Homeee</a>
           </li>
           <li>
             <a href="#">About</a>
@@ -68,7 +163,7 @@
       <div class="footer">
         <p>♥ from the Yeoman team</p>
       </div>
-    </div>
+    </div> -->
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -87,23 +182,16 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    
+    <!-- <script src="node_modules/jquery/jquery.min.js"></script> -->
+    <!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
+    <script type="text/javascript" src="/node_modules/swiper/dist/js/swiper.min.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!-- endbuild -->
   </body>
 </html>
